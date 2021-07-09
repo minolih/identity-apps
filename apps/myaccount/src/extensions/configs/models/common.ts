@@ -19,5 +19,12 @@
 export interface CommonConfig {
     AdvancedSearchWithBasicFilters: {
         enableQuerySearch: boolean;
-    }
+    };
+    OverviewPage: {
+        enableThreeWidgetLayout: boolean;
+    };
+    // FederatedUser: {
+    //     enableFederatedUser: boolean;
+    // }
+
 }
