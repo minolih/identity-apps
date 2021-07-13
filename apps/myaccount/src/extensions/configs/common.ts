@@ -37,7 +37,7 @@ export const commonConfig: CommonConfig = {
     },
     PersonalInfoPage: {
         ExternalLogins: {
-            disableExternalLoginsOnEmpty: true
+            disableExternalLoginsOnEmpty: false
         }
     }
 };
