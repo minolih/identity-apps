@@ -264,10 +264,15 @@ export const EmailRecovery: React.FunctionComponent<EmailRecoveryProps> = (
                                 }</List.Header>
                                 <List.Description>
                                     {
-                                        email || email !== ""
-                                            ? t("myAccount:components.accountRecovery.emailRecovery.descriptions.update",
-                                            { email: email ? maskEmail(email) : "" })
-                                            : t("myAccount:components.accountRecovery.emailRecovery.descriptions.add")
+                                        enableEditEmail ? (
+                                            email || email !== ""
+                                                ? t("myAccount:components.accountRecovery.emailRecovery.descriptions.update",
+                                                { email: email ? maskEmail(email) : "" })
+                                                : t("myAccount:components.accountRecovery.emailRecovery.descriptions.add")
+                                        ): (
+                                            t("myAccount:components.accountRecovery.emailRecovery.descriptions.view",
+                                                { email: email ? maskEmail(email) : "" })
+                                        )
                                     }
                                     {
                                         (email || email !== "") && isEmailPending ? (
